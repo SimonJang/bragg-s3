@@ -1,4 +1,4 @@
-# bragg-s3 [![Build Status](https://travis-ci.com/simon.jang/bragg-s3.svg?branch=master)](https://travis-ci.com/simon.jang/bragg-s3)
+# bragg-s3 [![Build Status](https://travis-ci.org/SimonJang/bragg-s3.svg?branch=master)](https://travis-ci.org/SimonJang/bragg-s3)
 
 > [bragg](https://github.com/SamVerschueren/bragg) middleware to process s3 triggers
 

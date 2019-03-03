@@ -7,8 +7,6 @@ module.exports = () => {
 
 			const s3triggerName = record.s3.configurationId;
 
-			console.log(s3triggerName);
-
 			ctx.request.body = {
 				bucket: record.s3.bucket.name,
 				key: record.s3.object.key,

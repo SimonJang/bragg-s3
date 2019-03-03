@@ -19,7 +19,7 @@ const s3 = require('bragg-s3');
 
 // Listen for events in the `TopicName` topic
 router.post('s3:triggerName', ctx => {
-    ctx.body = ctx.request.body; // {bucket: 'someBucket', key: 'foo.jpg'}
+    ctx.body = ctx.request.body; // {bucket: 'someBucket', key: 'foo.jpg', eventName: 'ObjectCreated:Put'}
 });
 
 app.use(s3());

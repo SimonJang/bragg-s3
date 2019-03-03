@@ -1,6 +1,6 @@
 {
 	"name": "bragg-s3",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "bragg middleware for s3 triggers",
 	"license": "MIT",
 	"repository": "simon.jang/bragg-s3",

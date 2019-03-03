@@ -81,7 +81,8 @@ test('middleware should process a S3 event', t => {
 		request: {
 			body: {
 				bucket: 'test.bucket',
-				key: 'test/placeholder2.json'
+				key: 'test/placeholder2.json',
+				eventName: 'ObjectCreated:Put'
 			}
 		},
 		path: 's3:s3TestEvent',

@@ -11,7 +11,8 @@ module.exports = () => {
 
 			ctx.request.body = {
 				bucket: record.s3.bucket.name,
-				key: record.s3.object.key
+				key: record.s3.object.key,
+				eventName: record.eventName
 			};
 
 			Object.defineProperty(ctx, 'path', {enumerable: true, value: `s3:${s3triggerName}`});

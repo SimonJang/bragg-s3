@@ -79,14 +79,16 @@ test('middleware should process a S3 event', t => {
 			Records: [s3Record]
 		},
 		request: {
-			body: {
-				bucket: 'test.bucket',
-				key: 'test/placeholder2.json',
-				eventName: 'ObjectCreated:Put'
-			}
+			body: [
+				{
+					bucket: 'test.bucket',
+					key: 'test/placeholder2.json',
+					eventName: 'ObjectCreated:Put'
+				}
+			]
 		},
 		path: 's3:s3TestEvent',
-		method: 'post'
+		method: 'put'
 	});
 });
 

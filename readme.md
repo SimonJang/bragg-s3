@@ -9,6 +9,24 @@
 $ npm install bragg-s3
 ```
 
+## Routing
+
+The routing is decided based on the event [type](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types)
+
+| Event name  | Method  |
+|---|---|
+| ObjectCreated:* | post |
+| ObjectCreated:Put | put |
+| ObjectCreated:Post | post |
+| ObjectCreated:Copy | post |
+| ObjectCreated:CompleteMultipartUpload | post |
+| ObjectRemoved:* | delete |
+| ObjectRemoved:Delete | delete |
+| ObjectRemoved:DeleteMarkerCreated | delete |
+| ObjectRestore:Post | post |
+| ObjectRestore:Completed | post |
+| ReducedRedundancyLostObject | post |
+
 
 ## Usage
 
@@ -19,7 +37,7 @@ const s3 = require('bragg-s3');
 
 // Listen for events in the `TopicName` topic
 router.post('s3:triggerName', ctx => {
-    ctx.body = ctx.request.body; // {bucket: 'someBucket', key: 'foo.jpg', eventName: 'ObjectCreated:Put'}
+    ctx.body = ctx.request.body; // [{bucket: 'someBucket', key: 'foo.jpg', eventName: 'ObjectCreated:Put'}]
 });
 
 app.use(s3());

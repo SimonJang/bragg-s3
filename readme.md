@@ -16,7 +16,7 @@ The routing is decided based on the event [type](https://docs.aws.amazon.com/Ama
 | Event name  | Method  |
 |---|---|
 | ObjectCreated:* | post |
-| ObjectCreated:Put | put |
+| ObjectCreated:Put | post |
 | ObjectCreated:Post | post |
 | ObjectCreated:Copy | post |
 | ObjectCreated:CompleteMultipartUpload | post |
@@ -46,7 +46,7 @@ app.use(router.routes());
 exports.handler = app.listen();
 ```
 
-The `s3:` prefix is added before the name of the S3 trigger. The `bucket` and `key` are provided in the `body` of the `request` object.
+The `s3:` prefix is added before the name of the S3 trigger. The `bucket`, `key` and `eventName` are provided in the `body` of the `request` object. Routing is decided by the `configurationId` provided in the request. This can be a UUID when the trigger is created using AWS CloudFormation.
 
 ## API
 

@@ -3,7 +3,7 @@
 	"version": "2.0.0",
 	"description": "bragg middleware for s3 triggers",
 	"license": "MIT",
-	"repository": "simon.jang/bragg-s3",
+	"repository": "SimonJang/bragg-s3",
 	"author": {
 		"name": "Simon",
 		"email": "simon.jang@into.care",

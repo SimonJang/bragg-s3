@@ -88,7 +88,7 @@ test('middleware should process a S3 event', t => {
 			]
 		},
 		path: 's3:s3TestEvent',
-		method: 'put'
+		method: 'post'
 	});
 });
 

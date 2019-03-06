@@ -2,7 +2,7 @@
 
 const methodMap = {
 	'ObjectCreated:*': 'post',
-	'ObjectCreated:Put': 'put',
+	'ObjectCreated:Put': 'post',
 	'ObjectCreated:Post': 'post',
 	'ObjectCreated:Copy': 'post',
 	'ObjectCreated:CompleteMultipartUpload': 'post',
